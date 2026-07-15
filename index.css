@@ -1,0 +1,91 @@
+export interface UserProfile {
+  name: string;
+  college: string;
+  course: string;
+  semester: string;
+  streak: number;
+  lastActiveDate?: string;
+  dailyStudyGoalMinutes: number;
+  totalStudyMinutes: number;
+  completedChapters: string[]; // List of chapter IDs
+  bookmarkedTopics: string[]; // List of topic/chapter IDs
+}
+
+export interface Task {
+  id: string;
+  text: string;
+  completed: boolean;
+  dueDate: string;
+  subjectBranch: string;
+}
+
+export interface Assignment {
+  id: string;
+  title: string;
+  subjectBranch: string;
+  dueDate: string;
+  priority: "Low" | "Medium" | "High";
+  status: "To Do" | "In Progress" | "Completed";
+}
+
+export interface Formula {
+  name: string;
+  latex: string;
+  explanation: string;
+}
+
+export interface Flashcard {
+  id: string;
+  question: string;
+  answer: string;
+  hint?: string;
+}
+
+export interface QuizQuestion {
+  id: string;
+  question: string;
+  options: string[];
+  answerIndex: number;
+  explanation: string;
+}
+
+export interface PracticeTest {
+  id: string;
+  title: string;
+  subjectBranch: string;
+  questions: QuizQuestion[];
+  timeLimitMinutes: number;
+}
+
+export interface TestAttempt {
+  id: string;
+  date: string;
+  subjectBranch: string;
+  score: number;
+  total: number;
+  durationSeconds: number;
+}
+
+export interface Chapter {
+  id: string;
+  title: string;
+  notes: string;
+  formulas: Formula[];
+  flashcards: Flashcard[];
+}
+
+export interface SubjectBranch {
+  id: string;
+  name: string;
+  iconName: string; // Lucide icon name
+  color: string; // Tailwind color classes
+  gradient: string; // Tailwind gradient classes
+  chapters: Chapter[];
+}
+
+export interface Message {
+  id: string;
+  role: "user" | "assistant";
+  content: string;
+  timestamp: string;
+}

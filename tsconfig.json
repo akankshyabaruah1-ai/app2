@@ -1,0 +1,6 @@
+{
+  "name": "Physics Planner Pro",
+  "description": "A premium, modern physics study planner mobile app featuring smart study planning, AI assistant, formula library, flashcards, practice tests, and performance analytics.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
